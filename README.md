@@ -102,7 +102,7 @@ src/
 
 ## 🔗 Live Demo
 Deployed via Vercel  
-(Add your Vercel URL here)
+(https://logic-looper-mocha.vercel.app)
 
 ---
 
