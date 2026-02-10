@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Logic Looper 🧩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Logic Looper is a client-first daily logic puzzle web application designed around consistency, engagement, and clean architecture.  
+The project is built in phased milestones with minimal backend dependency and scalable puzzle logic.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Project Status
 
-### `npm start`
+### ✅ Phase 1 – Foundation (Completed)
+- React application setup
+- Tailwind CSS integration
+- Google Authentication using Firebase
+- Prisma schema setup (PostgreSQL / Neon-ready)
+- IndexedDB configuration for client-side storage
+- CI/CD deployment pipeline using Vercel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✅ Phase 2 – Core Game Engine (Completed)
+- Client-side puzzle logic framework
+- Daily puzzle generation using date-based seeding
+- Sequence-based logic puzzle implementation
+- Answer validation engine
+- Basic game UI
+- Local progress persistence using IndexedDB
+- Puzzle locking after successful solve (daily)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 How the App Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- A new puzzle is generated daily using the current date as a deterministic seed.
+- All users receive the same puzzle for a given day.
+- Puzzle generation and validation run entirely on the client.
+- Once solved, the puzzle is locked until the next day.
+- Progress persists across refreshes and browser restarts.
+- The app works offline after initial load.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
+- React
+- Tailwind CSS
+- JavaScript (ES6+)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Authentication
+- Firebase (Google Sign-In)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Data & Storage
+- IndexedDB (client-side persistence)
+- Prisma ORM (schema only)
+- PostgreSQL (planned via Neon)
 
 ### Deployment
+- Vercel (GitHub-integrated CI/CD)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+src/
+ ├── engine/
+ │   ├── generator.js
+ │   ├── validator.js
+ │   ├── storage.js
+ │   └── puzzleTypes/
+ │       └── sequence.js
+ ├── App.js
+ └── index.js
+```
+
+---
+
+## 🎯 Design Philosophy
+
+- Client-first architecture
+- Minimal backend dependency
+- Deterministic daily gameplay
+- Offline-first experience
+- Scalable puzzle framework
+
+---
+
+## 🔜 Upcoming Phases
+
+### Phase 3 – Engagement & Retention
+- Streak tracking
+- Scoring system
+- Hint system
+- UI feedback & micro-interactions
+
+### Phase 4 – Optimization & Polish
+- Performance tuning
+- Lighthouse optimization
+- Code quality improvements
+- Optional TypeScript migration
+- Testing and reliability enhancements
+
+---
+
+## 🔗 Live Demo
+Deployed via Vercel  
+(Add your Vercel URL here)
+
+---
+
+## 📌 Notes
+- This repository currently represents Phase 1 and Phase 2 milestones.
+- Backend APIs and persistent user statistics will be introduced in later phases.
+- The architecture is designed to support additional puzzle types with minimal changes.
